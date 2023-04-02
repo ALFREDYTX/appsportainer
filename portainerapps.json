@@ -27,26 +27,29 @@
 	  },
       {
         "categories": [
-            "Games"
+          "Games"
         ],
         "description": "A Minecraft server that you can self-host, with support for plugins and mods. Compatible with the official Minecraft client and other third-party clients.",
         "image": "itzg/minecraft-server:latest",
-        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/minecraft.png",
+        "logo": "https://github.com/truecharts/charts/raw/master/charts/stable/minecraft-java/icon.png",
         "name": "Minecraft Server",
         "note": "This project is not associated with Mojang AB or Microsoft Corporation.",
         "platform": "linux",
         "ports": [
-            "25565/tcp"
+          "25565/tcp"
         ],
         "restart_policy": "unless-stopped",
         "title": "Minecraft Server",
         "type": 1,
         "volumes": [
-            {
-                "bind": "/srv/dev-disk-by-label-Files/Config/Minecraft",
-                "container": "/data"
-            }
-        ]
+          {
+            "bind": "/home/server/MinecraftServer/data",
+            "container": "/data"
+          }
+        ],
+        "environment": {
+          "EULA": "true"
+        }
       },
       {
         "type": 1,
