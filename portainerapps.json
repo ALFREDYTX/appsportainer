@@ -9577,35 +9577,6 @@
         ]
       },
       {
-        "type": 1,
-        "title": "Minecraft Server with File Browser and FTP",
-        "name": "minecraft-filebrowser-ftp",
-        "description": "Minecraft server with File Browser and FTP enabled.",
-        "logo": "https://minecraft.net/favicon-96x96.png",
-        "image": "itzg/minecraft-server",
-        "env": [
-            {
-                "name": "EULA",
-                "label": "EULA",
-                "default": "false",
-                "description": "Accept Minecraft EULA (true/false)"
-            }
-        ],
-        "ports": [
-            "25565:25565/tcp",
-            "8080:8080/tcp",
-            "20:20/tcp",
-            "21:21/tcp",
-        ],
-        "volumes": [
-            {
-                "container": "/data",
-                "bind": "/minecraft"
-            }
-        ],
-        "restart_policy": "unless-stopped"
-      },    
-      {
         "type": 3,
         "title": "TOSIBOX Lock for Container",
         "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
