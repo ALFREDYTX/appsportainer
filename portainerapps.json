@@ -26,30 +26,38 @@
 		]
 	  },
       {
-        "categories": [
-          "Games"
-        ],
+        "type": 3,
+        "title": "Minecraft Java",
         "description": "A Minecraft server that you can self-host, with support for plugins and mods. Compatible with the official Minecraft client and other third-party clients.",
-        "image": "itzg/minecraft-server:latest",
-        "logo": "https://github.com/truecharts/charts/raw/master/charts/stable/minecraft-java/icon.png",
-        "name": "Minecraft Server",
-        "note": "This project is not associated with Mojang AB or Microsoft Corporation.",
+        "categories": ["Games"],
         "platform": "linux",
-        "ports": [
-          "25565/tcp"
-        ],
-        "restart_policy": "unless-stopped",
-        "title": "Minecraft Server",
-        "type": 1,
-        "volumes": [
-          {
-            "bind": "/home/server/MinecraftServer/data",
-            "container": "/data"
-          }
-        ],
-        "environment": {
-          "EULA": "true"
-        }
+        "logo": "https://github.com/truecharts/charts/raw/master/charts/stable/minecraft-java/icon.png",
+        "repository": {
+          "url": "https://github.com/ALFREDYTX/appsportainer",
+          "stackfile": "Stacks/Minecraft/Java/docker-compose.yml"
+        },
+        "env": [
+            {
+                "name": "SERVER_NAME",
+                "label": "Name Server",
+                "description": "Type the name that the server will have."
+              },
+              {
+                "name": "SERVER_VERSION",
+                "label": "Version Minecraft",
+                "description": "Choose the version of minecraft you want to install."
+              },
+              {
+                "name": "SERVER_RAM",
+                "label": "Ram Server",
+                "description": "Set the amount of RAM your server will have."
+             },
+             {
+                "name": "SERVER_CPU",
+                "label": "Cpu Server",
+                "description": "Set the number of cores your server will have."
+             }
+        ]
       },
       {
         "type": 1,
@@ -9337,7 +9345,7 @@
             "label": "Database root password",
             "description": "Password used by the MySQL root user."
           }
-        ]
+        ]   
       },
       {
         "type": 3,
