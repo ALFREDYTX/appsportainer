@@ -8,7 +8,7 @@ services:
     ports:
       - ":25565"
     volumes:
-      - /home/server/MinecraftServer/${SERVER_NAME}/data:/data
+      - /home/server/MinecraftServers/${SERVER_NAME}/data:/data
     environment:
       EULA: "true"
       VERSION: ${SERVER_VERSION}
