@@ -26,7 +26,7 @@
 		]
 	  },
       {
-        "type": 3,
+        "type": 2,
         "title": "Minecraft Java",
         "description": "A Minecraft server that you can self-host, with support for plugins and mods. Compatible with the official Minecraft client and other third-party clients.",
         "categories": ["Games"],
