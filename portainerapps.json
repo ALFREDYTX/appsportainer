@@ -9604,7 +9604,7 @@
             }
         ],
         "restart_policy": "unless-stopped"
-    },    
+      },    
       {
         "type": 3,
         "title": "TOSIBOX Lock for Container",
