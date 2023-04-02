@@ -26,9 +26,10 @@
 		]
 	  },
       {
-        "type": 2,
+        "type": 3,
         "title": "Minecraft Java",
         "description": "A Minecraft server that you can self-host, with support for plugins and mods. Compatible with the official Minecraft client and other third-party clients.",
+        "note": "Deploys a Minecraft server",
         "categories": ["Games"],
         "platform": "linux",
         "logo": "https://github.com/truecharts/charts/raw/master/charts/stable/minecraft-java/icon.png",
@@ -57,7 +58,7 @@
                 "label": "Cpu Server",
                 "description": "Set the number of cores your server will have."
              }
-        ]
+            ]
       },
       {
         "type": 1,
