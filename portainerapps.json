@@ -26,14 +26,15 @@
 		]
 	  },
       {
-        "type": 3,
+        "type": 3.9,
         "title": "Minecraft Java",
         "description": "A Minecraft server that you can self-host, with support for plugins and mods. Compatible with the official Minecraft client and other third-party clients.",
         "categories": ["Games"],
         "platform": "linux",
         "logo": "https://github.com/truecharts/charts/raw/master/charts/stable/minecraft-java/icon.png",
         "repository": {
-          "url": "https://github.com/ALFREDYTX/appsportainer/tree/main/stacks/Minecraft/Java"
+          "url": "https://github.com/ALFREDYTX/appsportainer/tree/main/stacks/Minecraft/Java",
+          "stackfile": "docker-compose.yml"
         },
         "env": [
             {
