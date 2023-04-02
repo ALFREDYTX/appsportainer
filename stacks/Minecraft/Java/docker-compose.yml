@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:${SERVER_VERSION}
+    container_name: ${SERVER_NAME}-minecraft-server
+    restart: unless-stopped
+    ports:
+      - ":25565"
+    volumes:
+      - /home/server/MinecraftServer/${SERVER_NAME}/data:/data:z
+        # Limit storage size to SERVER_STORAGE
+        # Use anonymous volume for /data so that it can be limited
+        - /data
+          # Add max-size option to limit the size of the volume
+          # Set to the value of SERVER_STORAGE
+          # Note: Docker only supports suffixes "b", "k", "m", "g" for the max-size option
+          # For example, "10G" is 10 gigabytes, "1T" is 1 terabyte, etc.
+          # See https://docs.docker.com/compose/compose-file/compose-file-v3/#max-size
+          max-size: ${SERVER_STORAGE}
+    environment:
+      EULA: "true"
+      VERSION: ${SERVER_VERSION}
+      MAX_RAM: ${SERVER_RAM}
+      INIT_MEMORY: ${SERVER_RAM}
+      CPU_COUNT: ${SERVER_CPU}
